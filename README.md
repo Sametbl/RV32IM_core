@@ -16,8 +16,8 @@ This processor implements the **RV32I base integer ISA**, with support extended 
 
 ## FPGA Demonstration
 You can watch the core in action, demonstrated on an FPGA board:
-🔗 [RV32I FPGA Demonstration](https://drive.google.com/drive/folders/13oYjmAOKQ4ntwubS50nfFlonobGrE5KT?usp=sharing)
-🔗 [M-extension FPGA Demonstration](https://drive.google.com/drive/folders/1CxTewY_Il2OmaQB1IkkPA-PhEx3SH5Fj?usp=sharing)
+- 🔗 [RV32I FPGA Demonstration](https://drive.google.com/drive/folders/13oYjmAOKQ4ntwubS50nfFlonobGrE5KT?usp=sharing)
+- 🔗 [M-extension FPGA Demonstration](https://drive.google.com/drive/folders/1CxTewY_Il2OmaQB1IkkPA-PhEx3SH5Fj?usp=sharing)
 
 
 ## RV32I Design Notes (Author's Guide)
