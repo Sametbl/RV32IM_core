@@ -1,30 +1,40 @@
 # RV32IM_core
 
-This is a custom **RISC-V RV32IM processor core** currently under development by a student at HCMUT. The project is implemented in **SystemVerilog** and supports the **RV32IM** instruction set.
+This is a **RISC-V RV32IM processor core** currently under development by a student at **HCMUT**. The design is written in **SystemVerilog** and targets FPGA implementation. The core supports the **RV32IM** instruction set.
 
 ## Instruction Set Architecture
-The implementation is based on the official **RISC-V ISA specification**.  
-Reference: [`riscv32i_instruction_set.pdf`](./riscv32i_instruction_set.pdf)
+This processor implements the **RV32I base integer ISA**, with support extended to **RV32IM**. The RV32IM maintains the same architecture as RV32I but adds multiplication and division capabilities. You may find detailed ISA documentation below:
+- 📄 [riscv32i_instruction_set.pdf](./riscv32i_instruction_set.pdf) – Core instruction definitions
+- 📄 [riscv32i.pdf](./riscv32i.pdf) – ISA summary
+- 📄 [RV32I_manual.pdf](./RV32I_manual.pdf) – Descriptive documentation of RV32I
+- 📄 [riscv-card.pdf](./riscv-card.pdf) – Quick reference card for instruction formats and opcodes
+
 
 ## CPU Architecture Diagram
-![RV32IM CPU Diagram](42806fec-b818-4723-ac78-8d69e5239b74.png)
+![CPU Diagram](diagram.png)
 
-## Demonstration Video
-You can find demonstration videos of this CPU running on hardware or simulation below:
-🔗 [Watch Demo on Google Drive](https://drive.google.com/your_demo_video_link_here)
+
+## FPGA Demonstration
+You can watch the core in action, demonstrated on an FPGA board:
+🔗 [RV32I FPGA Demonstration](https://drive.google.com/drive/folders/13oYjmAOKQ4ntwubS50nfFlonobGrE5KT?usp=sharing)
+🔗 [M-extension FPGA Demonstration](https://drive.google.com/drive/folders/1CxTewY_Il2OmaQB1IkkPA-PhEx3SH5Fj?usp=sharing)
+
+
+## RV32I Design Notes (Author's Guide)
+If you're interested in how the **RV32I integer core was designed and implemented**, you can refer to this document written by the author.  
+Since RV32IM is simply an extension of RV32I with the Multiply/Divide (`M`) instructions added, the architecture remains the same.
+- 📄 [RV32I_Cookbook_Unfinished.pdf](./RV32I_Cookbook_Unfinished.pdf) – A detailed explanation of how the RV32I core is built and functions (Work in Progress)
 
 
 ## Folder Structure
-- `00_src` — Core source code (SystemVerilog)
+- `00_src` — Core RTL source code (SystemVerilog)
 - `01_tb` — Testbenches
-- `02_sim` — Simulation output and scripts
-- `03_quartus` — FPGA project files
-- `bcdtohex.sv` — Utility module for display conversion
-- Various PDFs — Reference materials and documentation
-
+- `02_sim` — Simulation scripts and outputs
+- `03_quartus` — Quartus project files for FPGA synthesis
+- `bcdtohex.sv` — Utility module for binary-to-display conversion
+- `*.pdf` — Reference documents for instruction sets and RISC-V standards
 
 ## Note
 This project is still under active development. More features and extensions may be added in the future.
-
 ---
 
