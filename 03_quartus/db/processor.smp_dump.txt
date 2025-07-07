@@ -1,0 +1,21 @@
+
+State Machine - |processor_wrapper|processor:CPU|multiplier_divider_unit:M_extension|Pre_state
+Name Pre_state.BOTH_DONE Pre_state.DIV_DONE Pre_state.MUL_DONE Pre_state.ACTIVE 
+Pre_state.ACTIVE 0 0 0 0 
+Pre_state.MUL_DONE 0 0 1 1 
+Pre_state.DIV_DONE 0 1 0 1 
+Pre_state.BOTH_DONE 1 0 0 1 
+
+State Machine - |processor_wrapper|processor:CPU|multiplier_divider_unit:M_extension|divider_32bit:DIV|PreStep
+Name PreStep.WRITE PreStep.EXECUTE PreStep.INIT PreStep.IDLE 
+PreStep.IDLE 0 0 0 0 
+PreStep.INIT 0 0 1 1 
+PreStep.EXECUTE 0 1 0 1 
+PreStep.WRITE 1 0 0 1 
+
+State Machine - |processor_wrapper|processor:CPU|multiplier_divider_unit:M_extension|multiplier_32bit:MUL|Pre_state
+Name Pre_state.WRITE Pre_state.ACTIVE Pre_state.FETCH Pre_state.IDLE 
+Pre_state.IDLE 0 0 0 0 
+Pre_state.FETCH 0 0 1 1 
+Pre_state.ACTIVE 0 1 0 1 
+Pre_state.WRITE 1 0 0 1 
